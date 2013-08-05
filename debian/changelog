@@ -1,3 +1,10 @@
+grub2 (2.00-13ubuntu3centrych5~bpo) precise; urgency=low
+
+  * Republished after git repository clean-up.
+  * debian/control: updated repository URL
+
+ -- Jack Radigan <jprad@centrych.org>  Sun, 04 Aug 2013 23:44:14 -0400
+
 grub2 (2.00-13ubuntu3centrych4~bpo) precise; urgency=low
 
   * debian/copyright: changed owner.
