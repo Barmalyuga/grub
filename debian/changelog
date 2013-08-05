@@ -1,3 +1,37 @@
+grub2 (2.00-13ubuntu3centrych4~bpo) precise; urgency=low
+
+  * debian/copyright: changed owner.
+
+ -- Jack Radigan <jprad@centrych.org>  Sun, 21 Jul 2013 10:45:12 -0400
+
+grub2 (2.00-13ubuntu3centrych3~bpo) precise; urgency=low
+
+  * debian/patches/centrych_mods.patch:
+    - /etc/grub.d/30_os-prober: adds partition information to grub menu
+
+ -- Jack Radigan <jprad@centrych.org>  Fri, 17 May 2013 20:53:59 -0400
+
+grub2 (2.00-13ubuntu3centrych2~bpo) precise; urgency=low
+
+  * debian/patches/efi_boot_graphics.patch: modified version of the patch
+    in https://bugs.launchpad.net/ubuntu/+source/grub2/+bug/924622/comments/2.
+    - this patch enables video mode for EFI boots so that plymouth, especially
+      when using full disk encryption, is displayed.
+  * debian/patches/centrych_mods.patch:
+    - /etc/grub.d/10_linux: adds partition information to grub menu
+  * debian/grub.d/05_debian_theme: uses debian colors for Centrych grub menu
+  * debian/default/grub: sets GRUB_DISTRIBUTOR to Centrych and adds
+    GRUB_GFXPAYLOAD_LINUX
+
+ -- Jack Radigan <jprad@centrych.org>  Thu, 16 May 2013 08:28:32 -0400
+
+grub2 (2.00-13ubuntu3centrych1~bpo) precise; urgency=low
+
+  * Backport.
+  * debian/control, debian/rules: reverted to gcc4.6.
+
+ -- Jack Radigan <jprad@centrych.org>  Tue, 14 May 2013 14:09:36 -0400
+
 grub2 (2.00-13ubuntu3) raring; urgency=low
 
   * In 05_debian_theme treat 'Kubuntu' as Ubuntu alias in $GRUB_DISTRIBUTOR.
