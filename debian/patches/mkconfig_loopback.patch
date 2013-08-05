@@ -1,3 +1,4 @@
+mkconfig_loopback.patch
 Description: Handle filesystems loop-mounted on file images
  Improve prepare_grub_to_access_device to emit appropriate commands for such
  filesystems, and ignore them in Linux grub.d scripts.
@@ -8,9 +9,6 @@ Description: Handle filesystems loop-mounted on file images
  /proc/mounts are Linux-specific, though, so we might need to refine this
  before sending it upstream.  The changes to the Linux grub.d scripts might
  be better handled by integrating 10_lupin properly instead.
-
-Index: b/util/grub-mkconfig_lib.in
-===================================================================
 --- a/util/grub-mkconfig_lib.in
 +++ b/util/grub-mkconfig_lib.in
 @@ -129,6 +129,21 @@

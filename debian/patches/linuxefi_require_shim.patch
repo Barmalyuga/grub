@@ -1,11 +1,9 @@
+linuxefi_require_shim.patch
 Description: Make linuxefi refuse to boot without shim
  This is only intended as a temporary measure.
 Author: Colin Watson <cjwatson@ubuntu.com>
 Forwarded: not-needed
 Last-Update: 2013-01-29
-
-Index: b/grub-core/loader/i386/efi/linux.c
-===================================================================
 --- a/grub-core/loader/i386/efi/linux.c
 +++ b/grub-core/loader/i386/efi/linux.c
 @@ -63,7 +63,7 @@

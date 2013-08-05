@@ -1,0 +1,61 @@
+efi_boot_graphics.patch
+Description: This patch is adapted from the ubuntu_no_smooth_boot_on_efi.patch
+ by Xiao-Long Chen <chenxiaolong@cxl.epac.to>
+
+ The only changes to his original patch comments below are:
+   * This patch checks for /boot/efi/EFI/ubuntu/grubx64.efi, which will only
+     be present on a system that has grub-efi installed.
+   * != "test" check & load_video line added in last patch hunk.
+ .
+   * Disable the generation of the linux_gfx_mode lines, since they cause
+     no boot messages or the plymouth splash to appear. It can even cause
+     some machines to kernel panic.
+   * Ensure that load_video is run so that the efi video modules are loaded
+     on EFI systems.
+ .
+ Still hackish, but this patch checks for the existance of
+ /boot/efi/EFI/ubuntu/grubx64.efi, which should only exist on a system that is
+ using EFI boot. The Ubuntu installer will only install GRUB2 EFI if its booted
+ in EFI mode, so this should work fine until is proper fix is found.
+Origin:      https://bugs.launchpad.net/ubuntu/+source/grub2/+bug/924622/comments/2
+Author:      Jack Radigan <jprad@centrych.org>
+Last-Update: 2013-08-04
+--- a/util/grub.d/10_linux.in
++++ b/util/grub.d/10_linux.in
+@@ -135,7 +135,10 @@
+       fi
+   fi
+   if [ x$type != xrecovery ] ; then
++      # Only set gfxmode if not using EFI boot
++      if [ ! -e /boot/efi/EFI/ubuntu/grubx64.efi ] ; then
+       echo "	gfxmode \$linux_gfx_mode" | sed "s/^/$submenu_indentation/"
++      fi
+   fi
+ 
+   echo "	insmod gzio" | sed "s/^/$submenu_indentation/"
+@@ -221,9 +224,10 @@
+ 
+ # Use ELILO's generic "efifb" when it's known to be available.
+ # FIXME: We need an interface to select vesafb in case efifb can't be used.
++# Only set gfxmode if not using EFI boot
+ if [ "x$GRUB_GFXPAYLOAD_LINUX" != x ]; then
+   echo "set linux_gfx_mode=$GRUB_GFXPAYLOAD_LINUX"
+-else
++elif [ ! -e /boot/efi/EFI/ubuntu/grubx64.efi ] ; then
+   cat << EOF
+ if [ "\${recordfail}" != 1 ]; then
+   if [ -e \${prefix}/gfxblacklist.txt ]; then
+@@ -244,9 +248,12 @@
+ fi
+ EOF
+ fi
+-cat << EOF
++if [ -e /boot/efi/EFI/ubuntu/grubx64.efi ] ; then
++  cat << EOF
+ export linux_gfx_mode
++if [ "\${linux_gfx_mode}" != "text" ]; then load_video; fi
+ EOF
++fi
+ 
+ # Extra indentation to add to menu entries in a submenu. We're not in a submenu
+ # yet, so it's empty. In a submenu it will be equal to '\t' (one tab).

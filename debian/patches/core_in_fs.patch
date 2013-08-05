@@ -1,5 +1,4 @@
-Index: b/util/grub-setup.c
-===================================================================
+core_in_fs.patch
 --- a/util/grub-setup.c
 +++ b/util/grub-setup.c
 @@ -85,6 +85,7 @@

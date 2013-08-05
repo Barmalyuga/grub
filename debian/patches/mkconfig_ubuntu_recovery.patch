@@ -1,11 +1,9 @@
+mkconfig_ubuntu_recovery.patch
 Description: "single" -> "recovery" when friendly-recovery is installed
 Author: Colin Watson <cjwatson@ubuntu.com>
 Author: Stéphane Graber <stgraber@ubuntu.com>
 Forwarded: no
 Last-Update: 2013-01-21
-
-Index: b/util/grub.d/10_linux.in
-===================================================================
 --- a/util/grub.d/10_linux.in
 +++ b/util/grub.d/10_linux.in
 @@ -243,8 +243,13 @@

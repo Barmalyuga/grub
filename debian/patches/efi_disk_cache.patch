@@ -1,3 +1,4 @@
+efi_disk_cache.patch
 Description: Bump the values of GRUB_DISK_CACHE_SIZE and GRUB_DISK_CACHE_BITS
  on EFI systems (and only on EFI sytems) to dramatically reduce the load times
  for vmlinux and initrd.  Forwarding this isn't required as upstream trunk
@@ -7,9 +8,6 @@ Origin: other, http://blog.fpmurphy.com/2010/03/grub2-efi-support.html
 Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/grub2/+bug/944347
 Forwarded: not-needed
 Last-Update: 2012-03-05
-
-Index: b/include/grub/disk.h
-===================================================================
 --- a/include/grub/disk.h
 +++ b/include/grub/disk.h
 @@ -146,7 +146,11 @@

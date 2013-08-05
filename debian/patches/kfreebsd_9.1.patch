@@ -1,3 +1,4 @@
+kfreebsd_9.1.patch
 Description: Fix booting FreeBSD >= 9.1 amd64 kernels
 Author: Vladimir Serbinenko <phcoder@gmail.com>
 Origin: upstream, http://bazaar.launchpad.net/~vcs-imports/grub/grub2-bzr/revision/4556
@@ -5,9 +6,6 @@ Bug-Debian: http://bugs.debian.org/699002
 Forwarded: not-needed
 Applied-Upstream: http://bazaar.launchpad.net/~vcs-imports/grub/grub2-bzr/revision/4556
 Last-Update: 2013-01-28
-
-Index: b/grub-core/loader/i386/bsd.c
-===================================================================
 --- a/grub-core/loader/i386/bsd.c
 +++ b/grub-core/loader/i386/bsd.c
 @@ -1309,7 +1309,7 @@

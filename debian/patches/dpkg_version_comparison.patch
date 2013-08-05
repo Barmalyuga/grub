@@ -1,10 +1,8 @@
+dpkg_version_comparison.patch
 Description: Improve handling of Debian kernel version numbers
 Author: Robert Millan <rmh@aybabtu.com>
 Forwarded: not-needed
 Last-Update: 2011-04-21
-
-Index: b/util/grub-mkconfig_lib.in
-===================================================================
 --- a/util/grub-mkconfig_lib.in
 +++ b/util/grub-mkconfig_lib.in
 @@ -229,8 +229,9 @@

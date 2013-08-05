@@ -1,3 +1,4 @@
+install_efi_fallback.patch
 Description: Fall back to i386-pc if booted using EFI but -efi is missing
  It may be possible, particularly in recovery situations, to be booted using
  EFI on x86 when only the i386-pc target is installed.  There's nothing
@@ -6,9 +7,6 @@ Description: Fall back to i386-pc if booted using EFI but -efi is missing
 Author: Colin Watson <cjwatson@ubuntu.com>
 Forwarded: no
 Last-Update: 2012-09-14
-
-Index: b/util/grub-install.in
-===================================================================
 --- a/util/grub-install.in
 +++ b/util/grub-install.in
 @@ -292,7 +292,8 @@

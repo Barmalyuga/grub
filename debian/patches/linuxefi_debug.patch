@@ -1,10 +1,8 @@
+linuxefi_debug.patch
 Description: Add more debugging to linuxefi
 Author: Colin Watson <cjwatson@ubuntu.com>
 Forwarded: no
 Last-Update: 2013-01-29
-
-Index: b/grub-core/loader/i386/efi/linux.c
-===================================================================
 --- a/grub-core/loader/i386/efi/linux.c
 +++ b/grub-core/loader/i386/efi/linux.c
 @@ -19,6 +19,7 @@

@@ -1,3 +1,4 @@
+mkconfig_mid_upgrade.patch
 Description: Bail out if trying to run grub-mkconfig during upgrade to 2.00
  Since files in /etc/grub.d/ are conffiles, they are not put in place until
  grub-common is configured, meaning that they may be out of sync with the
@@ -9,9 +10,6 @@ Description: Bail out if trying to run grub-mkconfig during upgrade to 2.00
 Author: Colin Watson <cjwatson@ubuntu.com>
 Forwarded: no
 Last-Update: 2012-09-13
-
-Index: b/util/grub-mkconfig.in
-===================================================================
 --- a/util/grub-mkconfig.in
 +++ b/util/grub-mkconfig.in
 @@ -99,6 +99,13 @@

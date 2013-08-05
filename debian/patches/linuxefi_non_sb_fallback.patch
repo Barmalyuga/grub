@@ -1,11 +1,9 @@
+linuxefi_non_sb_fallback.patch
 Description: If running under UEFI secure boot, attempt to use linuxefi loader
 Author: Colin Watson <cjwatson@ubuntu.com>
 Author: Steve Langasek <steve.langasek@canonical.com>
 Forwarded: no
 Last-Update: 2012-10-05
-
-Index: b/grub-core/loader/i386/efi/linux.c
-===================================================================
 --- a/grub-core/loader/i386/efi/linux.c
 +++ b/grub-core/loader/i386/efi/linux.c
 @@ -234,7 +234,7 @@

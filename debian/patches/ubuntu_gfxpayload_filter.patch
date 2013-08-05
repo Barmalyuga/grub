@@ -1,3 +1,4 @@
+ubuntu_gfxpayload_filter.patch
 Description: Check hardware support before using gfxpayload=keep
  Set GRUB_GFXPAYLOAD_LINUX=keep unless it's known to be unsupported on the
  current hardware. See
@@ -6,9 +7,6 @@ Author: Evan Broder <evan@ebroder.net>
 Author: Colin Watson <cjwatson@ubuntu.com>
 Forwarded: no
 Last-Update: 2013-02-01
-
-Index: b/grub-core/Makefile.core.def
-===================================================================
 --- a/grub-core/Makefile.core.def
 +++ b/grub-core/Makefile.core.def
 @@ -704,6 +704,15 @@

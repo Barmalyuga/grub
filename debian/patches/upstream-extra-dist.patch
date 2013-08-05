@@ -1,11 +1,9 @@
+upstream-extra-dist.patch
 Description: Files present in upstream branch but missing from upstream tarball
  This allows us to maintain the packaging as a branch of upstream more
  easily.  The build system has been corrected upstream, so this patch can be
  dropped after the next upstream release.
 Last-Update: 2012-09-04
-
-Index: b/grub-core/tests/boot/linux.init-ppc.S
-===================================================================
 --- /dev/null
 +++ b/grub-core/tests/boot/linux.init-ppc.S
 @@ -0,0 +1,61 @@

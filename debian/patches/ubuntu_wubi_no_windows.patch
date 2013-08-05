@@ -1,3 +1,4 @@
+ubuntu_wubi_no_windows.patch
 Description: Skip Windows os-prober entries on Wubi systems
  Since we're already being booted from the Windows boot loader, including
  entries that take us back to it mostly just causes confusion, and stops us
@@ -7,9 +8,6 @@ Description: Skip Windows os-prober entries on Wubi systems
 Author: Colin Watson <cjwatson@ubuntu.com>
 Forwarded: not-needed
 Last-Update: 2012-09-06
-
-Index: b/util/grub.d/30_os-prober.in
-===================================================================
 --- a/util/grub.d/30_os-prober.in
 +++ b/util/grub.d/30_os-prober.in
 @@ -165,6 +165,8 @@

@@ -1,9 +1,7 @@
+uefi_firmware_setup.patch
 Description: Output a menu entry for firmware setup on UEFI FastBoot systems
 Author: Steve Langasek <steve.langasek@ubuntu.com>
 Forwarded: no
-
-Index: b/Makefile.util.def
-===================================================================
 --- a/Makefile.util.def
 +++ b/Makefile.util.def
 @@ -456,6 +456,12 @@

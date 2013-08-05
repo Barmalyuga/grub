@@ -1,3 +1,4 @@
+ubuntu_crashkernel.patch
 Description: Add crashkernel option
  Add crashkernel= option if kdump and makedumpfile are available. See
  https://blueprints.launchpad.net/ubuntu/+spec/foundations-karmic-linux-kernel-crash-dump.
@@ -6,9 +7,6 @@ Description: Add crashkernel option
 Author: Michael Vogt <michael.vogt@ubuntu.com>
 Forwarded: not-needed
 Last-Update: 2013-02-01
-
-Index: b/util/grub.d/10_linux.in
-===================================================================
 --- a/util/grub.d/10_linux.in
 +++ b/util/grub.d/10_linux.in
 @@ -82,6 +82,11 @@

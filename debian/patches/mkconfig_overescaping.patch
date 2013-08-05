@@ -1,3 +1,4 @@
+mkconfig_overescaping.patch
 Description: Remove extra layer of escaping from grub_probe
  Also add missing quoting to various grub.d scripts.
 Author: Vladimir Serbinenko <phcoder@gmail.com>
@@ -5,9 +6,6 @@ Origin: upstream, http://bazaar.launchpad.net/~vcs-imports/grub/grub2-bzr/revisi
 Forwarded: not-needed
 Applied-Upstream: http://bazaar.launchpad.net/~vcs-imports/grub/grub2-bzr/revision/4558
 Last-Update: 2012-09-17
-
-Index: b/util/grub-mkconfig_lib.in
-===================================================================
 --- a/util/grub-mkconfig_lib.in
 +++ b/util/grub-mkconfig_lib.in
 @@ -288,19 +288,19 @@

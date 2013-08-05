@@ -1,11 +1,9 @@
+install_stage2_confusion.patch
 Description: If GRUB Legacy is still around, tell packaging to ignore it
 Author: Colin Watson <cjwatson@debian.org>
 Bug-Debian: http://bugs.debian.org/586143
 Forwarded: not-needed
 Last-Update: 2010-06-18
-
-Index: b/util/grub-install.in
-===================================================================
 --- a/util/grub-install.in
 +++ b/util/grub-install.in
 @@ -863,6 +863,13 @@

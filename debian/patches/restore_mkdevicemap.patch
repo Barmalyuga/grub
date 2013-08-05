@@ -1,5 +1,4 @@
-Index: b/Makefile.util.def
-===================================================================
+restore_mkdevicemap.patch
 --- a/Makefile.util.def
 +++ b/Makefile.util.def
 @@ -289,6 +289,22 @@

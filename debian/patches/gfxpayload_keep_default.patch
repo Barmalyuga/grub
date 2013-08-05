@@ -1,3 +1,4 @@
+gfxpayload_keep_default.patch
 Description: Disable gfxpayload=keep by default
  Setting gfxpayload=keep has been known to cause efifb to be inappropriately
  enabled.  In any case, with the current Linux kernel the result of this
@@ -12,9 +13,6 @@ Author: Colin Watson <cjwatson@debian.org>
 Bug-Debian: http://bugs.debian.org/567245
 Forwarded: no
 Last-Update: 2010-03-09
-
-Index: b/util/grub.d/10_linux.in
-===================================================================
 --- a/util/grub.d/10_linux.in
 +++ b/util/grub.d/10_linux.in
 @@ -108,10 +108,6 @@

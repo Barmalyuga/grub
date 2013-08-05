@@ -1,11 +1,9 @@
+install_locale_langpack.patch
 Description: Prefer translations from language packs
 Author: Colin Watson <cjwatson@ubuntu.com>
 Bug-Ubuntu: https://bugs.launchpad.net/bugs/537998
 Forwarded: not-needed
 Last-Update: 2012-09-26
-
-Index: b/util/grub-install.in
-===================================================================
 --- a/util/grub-install.in
 +++ b/util/grub-install.in
 @@ -543,7 +543,7 @@

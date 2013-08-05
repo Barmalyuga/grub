@@ -1,3 +1,4 @@
+ubuntu_recovery_nomodeset.patch
 Description: Set nomodeset for recovery mode
  Also disable 'set gfxpayload=keep' even if the system normally supports it.
  .
@@ -5,9 +6,6 @@ Description: Set nomodeset for recovery mode
 Author: Colin Watson <cjwatson@ubuntu.com>
 Forwarded: no
 Last-Update: 2013-02-01
-
-Index: b/util/grub.d/10_linux.in
-===================================================================
 --- a/util/grub.d/10_linux.in
 +++ b/util/grub.d/10_linux.in
 @@ -134,7 +134,9 @@

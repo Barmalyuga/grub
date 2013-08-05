@@ -1,5 +1,4 @@
-Index: b/util/grub-mkconfig.in
-===================================================================
+grub.cfg_400.patch
 --- a/util/grub-mkconfig.in
 +++ b/util/grub-mkconfig.in
 @@ -253,6 +253,10 @@

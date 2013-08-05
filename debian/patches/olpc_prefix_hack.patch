@@ -1,8 +1,5 @@
-
-This sucks, but it's better than what OFW was giving us.
-
-Index: b/grub-core/kern/ieee1275/init.c
-===================================================================
+olpc_prefix_hack.patch
+Description: This sucks, but it's better than what OFW was giving us.
 --- a/grub-core/kern/ieee1275/init.c
 +++ b/grub-core/kern/ieee1275/init.c
 @@ -61,6 +61,7 @@

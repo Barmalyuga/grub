@@ -1,10 +1,8 @@
+install_signed.patch
 Description: Install signed images if UEFI Secure Boot is enabled
 Author: Colin Watson <cjwatson@ubuntu.com>
 Forwarded: no
 Last-Update: 2012-12-10
-
-Index: b/util/grub-install.in
-===================================================================
 --- a/util/grub-install.in
 +++ b/util/grub-install.in
 @@ -63,6 +63,12 @@

@@ -1,5 +1,4 @@
-Index: b/util/getroot.c
-===================================================================
+grub_legacy_0_based_partitions.patch
 --- a/util/getroot.c
 +++ b/util/getroot.c
 @@ -2144,7 +2144,7 @@

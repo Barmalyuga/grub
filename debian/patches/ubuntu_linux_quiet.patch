@@ -1,11 +1,9 @@
+ubuntu_linux_quiet.patch
 Description: Suppress kernel/initrd progress messages, except in recovery mode
 Author: Colin Watson <cjwatson@ubuntu.com>
 Bug-Ubuntu: https://bugs.launchpad.net/bugs/386922
 Forwarded: no
 Last-Update: 2013-02-01
-
-Index: b/util/grub.d/10_linux.in
-===================================================================
 --- a/util/grub.d/10_linux.in
 +++ b/util/grub.d/10_linux.in
 @@ -142,10 +142,12 @@

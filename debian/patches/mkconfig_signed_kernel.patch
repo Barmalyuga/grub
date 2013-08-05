@@ -1,10 +1,8 @@
+mkconfig_signed_kernel.patch
 Description: Generate configuration for signed UEFI kernels if available
 Author: Colin Watson <cjwatson@ubuntu.com>
 Forwarded: no
 Last-Update: 2013-01-29
-
-Index: b/util/grub.d/10_linux.in
-===================================================================
 --- a/util/grub.d/10_linux.in
 +++ b/util/grub.d/10_linux.in
 @@ -140,8 +140,16 @@

@@ -1,3 +1,4 @@
+ubuntu_quick_boot.patch
 Description: Bypass menu unless other OSes are installed or Shift is pressed
  If other operating systems are installed, then automatically unhide the
  menu. Otherwise, if GRUB_HIDDEN_TIMEOUT is 0, then use keystatus if
@@ -11,9 +12,6 @@ Description: Bypass menu unless other OSes are installed or Shift is pressed
 Author: Colin Watson <cjwatson@ubuntu.com>
 Forwarded: no
 Last-Update: 2012-09-26
-
-Index: b/util/grub.d/00_header.in
-===================================================================
 --- a/util/grub.d/00_header.in
 +++ b/util/grub.d/00_header.in
 @@ -272,22 +272,9 @@

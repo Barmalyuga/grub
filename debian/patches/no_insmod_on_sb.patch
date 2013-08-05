@@ -1,12 +1,10 @@
+no_insmod_on_sb.patch
 Description: Don't permit loading modules on UEFI secure boot
 Author: Matthew Garrett <mjg@redhat.com>
 Author: Colin Watson <cjwatson@ubuntu.com>
 Origin: vendor, http://pkgs.fedoraproject.org/cgit/grub2.git/tree/grub-2.00-no-insmod-on-sb.patch
 Forwarded: no
 Last-Update: 2013-01-02
-
-Index: b/grub-core/kern/dl.c
-===================================================================
 --- a/grub-core/kern/dl.c
 +++ b/grub-core/kern/dl.c
 @@ -42,6 +42,10 @@

@@ -1,12 +1,10 @@
+mkconfig_ubuntu_distributor.patch
 Description: Remove GNU/Linux from default distributor string for Ubuntu
  Ubuntu is called "Ubuntu", not "Ubuntu GNU/Linux".
 Author: Mario Limonciello <Mario_Limonciello@dell.com>
 Author: Colin Watson <cjwatson@debian.org>
 Forwarded: not-needed
 Last-Update: 2013-01-29
-
-Index: b/util/grub.d/10_linux.in
-===================================================================
 --- a/util/grub.d/10_linux.in
 +++ b/util/grub.d/10_linux.in
 @@ -31,7 +31,11 @@

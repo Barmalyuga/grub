@@ -1,3 +1,4 @@
+ubuntu_really_quiet.patch
 Description: Remove verbose messages printed before reading configuration
  In some ways this is awkward because it makes debugging harder, but it's a
  requirement for a smooth-looking boot process; we may be able to do better in
@@ -9,9 +10,6 @@ Bug-Ubuntu: https://bugs.launchpad.net/bugs/386922
 Bug-Ubuntu: https://bugs.launchpad.net/bugs/861048
 Forwarded: not-needed
 Last-Update: 2012-09-06
-
-Index: b/grub-core/kern/main.c
-===================================================================
 --- a/grub-core/kern/main.c
 +++ b/grub-core/kern/main.c
 @@ -207,13 +207,14 @@
