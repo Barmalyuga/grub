@@ -1,0 +1,30 @@
+grub2 for Centrych
+
+This package has been backported from 13.04 (raring) for Centrych 12.04 LTS.
+
+It contains the following modifications:
+
+ * A patch to fix a problem when booting on an EFI-enabled system that prevented
+   graphics from being displayed.  This is a major problem for systems that use
+   full disk encryption since Plymouth is used to prompt the user for a
+   passphrase.
+
+   The efi_boot_graphics.patch file details what was changed, the author, and
+   the location of the original patch.
+
+ * /etc/grub.d/10_linux: modified to include the partition for each grub menu
+   entry.
+
+   Note: this is not a bullet-proof patch since the partion names can change if
+   disks are added/removed.
+
+ * The debian.patch file, included in the source package, contains the
+   following changes to files in the debian directory for this package:
+
+   * debian/control, debian/rules: switched from gcc4.7 to 4.6
+
+   * debian/default/grub: GRUB_DISTRIBUTOR assignment modified to add Centrych
+     when applicable.  Adds GRUB_GFXPAYLOAD_LINUX assignment (commented).
+
+   * debian/grub.d/05_debian_theme: uses the debian grub theme when used on a
+     Centrych system.
