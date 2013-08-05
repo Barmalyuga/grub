@@ -5,6 +5,14 @@ Files: *
 Copyright: 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009  Free Software Foundation, Inc
 License: GPL-3+
 
+Files: debian/patches/centrych_mods.patch, debian/README.Centrych
+Copyright: 2013, Centrych Systems LLC
+License: GPL-3+
+
+Files: debian/patches/efi_boot_graphics.patch
+Copyright: 2013, Centrych Systems LLC
+                 Xiao-Long Chen <chenxiaolong@cxl.epac.to>
+License: GPL-3+
 
 Files: debian/*
 Copyright: 2003, 2004, 2005, 2006, 2007, 2008, 2009, Robert Millan
