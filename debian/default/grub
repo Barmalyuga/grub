@@ -7,7 +7,7 @@ GRUB_DEFAULT=0
 GRUB_HIDDEN_TIMEOUT=0
 GRUB_HIDDEN_TIMEOUT_QUIET=true
 GRUB_TIMEOUT=10
-GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_DISTRIBUTOR=`[ -e /etc/centrych-release ] && echo Centrych || lsb_release -i -s 2> /dev/null || echo Debian`
 GRUB_CMDLINE_LINUX_DEFAULT="@DEFAULT_CMDLINE@"
 GRUB_CMDLINE_LINUX=""
 
@@ -23,6 +23,9 @@ GRUB_CMDLINE_LINUX=""
 # note that you can use only modes which your graphic card supports via VBE
 # you can see them in real GRUB with the command `vbeinfo'
 #GRUB_GFXMODE=640x480
+
+# Enable if using vesafb for Plymouth under proprietary graphics drivers
+#GRUB_GFXPAYLOAD_LINUX=keep
 
 # Uncomment if you don't want GRUB to pass "root=UUID=xxx" parameter to Linux
 #GRUB_DISABLE_LINUX_UUID=true
